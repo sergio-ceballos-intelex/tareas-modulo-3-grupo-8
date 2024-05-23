@@ -23,4 +23,4 @@ Tambien se podria generar ramas para tener distintas versiones de un mismo códi
 
 * **PASO 5:** Y luego usamos el comando git commit -m "alguna indicacion" para pasar esos cambios de preparacion a envio.
 
-* **PASO 6:** 
+* **PASO 6:**  
