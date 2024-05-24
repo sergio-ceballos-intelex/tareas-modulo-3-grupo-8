@@ -1,9 +1,12 @@
 let numero=0;
 for(let contador= 1; contador <= 2000; contador++)
   {numero += 1;
+    if(numero.toString().startsWith('2'))
   console.log(numero);
   }
 
 
-/* Ahora cambio el numero de iteraciones a 2000, con esto logramos que se impriman los numeros de 1 en 1 hasta 2000 */
+/* Para la parte  3 de esta tarea se  uso la propiedad starysWith, para pasar los numeros a strings 
+y con el if le decimos que solo nos imprima los numeros que comienza con '2' */
+
 
