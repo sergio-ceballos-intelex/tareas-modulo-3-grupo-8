@@ -1,6 +1,8 @@
-// Números del 1 al 2000:
+// Números del 1 al 2000 que empiezan por 2:
 let num = 0;
-for(counter = 1; counter <= 2000; counter++) {
+for(count = 1; count <= 2000; count++) {
     num++;
-    console.log(num);
+    if(num.toString().startsWith("2")){
+        console.log(num);
+    }
 }
