@@ -15,12 +15,30 @@ Tambien se podria generar ramas para tener distintas versiones de un mismo códi
 
     Aca buscamos mediante cd/Desktop o cd C:\Users\User\Documents
 
+    !['Directorio para Repositorio'](./Paso1.png)
+
 * **PASO 2:** Clonamos el repositorio remoto en nuestro equipo. Para esto utilizamos el comando git clone url_repository 
+
+    !['Clonar un Repositorio'](./Paso2.png)
 
 * **PASO 3:** Una vez el visual realiza la descarga del repositorio en nuestro equipo procedemos a inicializar ese repositorio mediante el comando git init 
 
+    !['Inicializar un Repositorio'](./Paso3.png)
+
 * **PASO 4:** En este paso podemos entonces agregar a la etapa "staging area" o etapa de preparacion de envio usando el comando git add_nombredelarchivo o add . si queremos preparar todos los cambios o archivos.
+
+    !['Agregar Archivo-Stagin Area'](./Paso4.png)
 
 * **PASO 5:** Y luego usamos el comando git commit -m "alguna indicacion" para pasar esos cambios de preparacion a envio.
 
-* **PASO 6:**  
+    !['Archivo-Etapa-Envio-Commit'](./Paso5.png)
+
+* **PASO 6:**  Una vez ya enviamos los archivos es importante declarar comunicacion entre el repositorio remoto y el local mediante el comando git remote add origin ...url...
+
+    !['Comunicar-RepoRemoto&RepoLocal'](./Paso6.png)
+
+* **PASO 7:** En este paso subimos esos cambios en el(los) archivo(s) mediante el comando git push -u origin nombre_de_rama. 
+
+    !['Subir Archivos con Push'](./Paso7.png)
+
+* **PASO 8:** Finalmente terminamos el proceso realizando el PR o pull request en Github mediante el icono que se encuentra en la plataforma y ahi el administrador nos permite subir los cambios al main y asi terminar el proceso.
