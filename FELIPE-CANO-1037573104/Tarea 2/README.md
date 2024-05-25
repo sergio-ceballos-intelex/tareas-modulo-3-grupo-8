@@ -1,2 +1,2 @@
-Felipe Cano - 1037573104 - Pipecanoc86
-Tarea 2 
+Felipe Cano - 1037573104 
+Tarea 2 - Pipecanoc86
