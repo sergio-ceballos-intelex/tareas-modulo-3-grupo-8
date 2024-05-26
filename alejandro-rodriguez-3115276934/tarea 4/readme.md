@@ -15,6 +15,6 @@ _______
 
 * adiciono imagen pantallazo del codigo.
 
-![imagen-con-mi-codigo](img.png)
+![imagen-con-mi-codigo](use-git-log.png)
 
 ![Congratuletions!!!!!](img2.gif)
