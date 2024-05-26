@@ -18,3 +18,6 @@ _______
 ![imagen-con-mi-codigo](use-git-log.png)
 
 ![Congratuletions!!!!!](img2.gif)
+
+### se ha cambiado img codigo por img uso git log,
+### codigo esta en archivo main.js en mi carpeta de esta rama
