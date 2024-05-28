@@ -21,3 +21,4 @@ _______
 
 ### se ha cambiado img codigo por img uso git log,
 ### codigo esta en archivo main.js en mi carpeta de esta rama
+hola
