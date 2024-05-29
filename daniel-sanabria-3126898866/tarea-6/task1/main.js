@@ -32,14 +32,5 @@ buttons.forEach(btn => {
     });
 });
 
-// task 2
-
-let name = prompt("type your first-name");
-let age = parseInt(prompt("type your age"));
-let average = parseInt(prompt("write your average qualifications"));
-let isStable = prompt("are you register as a stable?('yes' or 'no')");
-let quantityApproveSubject = parseInt(prompt("quantity of approve subjects"));
-let scholarship = prompt("do you have scholarshipe?('yes' or 'no')")
-
 
 
