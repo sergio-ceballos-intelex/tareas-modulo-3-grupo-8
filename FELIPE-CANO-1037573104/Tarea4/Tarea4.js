@@ -1,9 +1,7 @@
-//Ejercicio 1  --- Impresion de numeros del 1 al 50 *************************************************************************************
 
-let myArray1=[];
-
-for(let inicio=1;inicio<=50;inicio++){
-    const numero=inicio;
-    myArray1.push(numero);
+for(let i=1;i<=2000;i++){
+    const numero=i;
+        if(numero.toString().startsWith('2')){
+         console.log(numero);
+        }
 }
-console.log("Numeros del 1 al 50", myArray1);
