@@ -61,3 +61,16 @@ let estudiantes = [
     console.log(element)
   });
 separar(4);
+
+// 4. Ejercicio de Filtrado de Arrays de Objetos:
+let libros = [
+    { titulo: "El principito", autor: "Antoine de Saint-Exupéry" },
+    { titulo: "Don Quijote de la Mancha", autor: "Miguel de Cervantes" },
+    { titulo: "Cien años de soledad", autor: "Gabriel García Márquez" },
+  ];
+
+  libros.forEach(element => {
+    if (element.titulo.includes("El")) {
+        console.log(`El libro que inicia con "El" es "${element.titulo}" de "${element.autor}"`)
+    }
+  });
