@@ -74,3 +74,13 @@ let libros = [
         console.log(`El libro que inicia con "El" es "${element.titulo}" de "${element.autor}"`)
     }
   });
+  separar(5);
+
+  // 5. Ejercicio de Concatenación de Arrays:
+let frutas1 = ["Manzana", "Plátano", "Naranja"];
+let frutas2 = ["Fresa", "Uva", "Piña"];
+
+frutas2.forEach(element => {
+    frutas1.push(element);
+});
+console.log(frutas1);
