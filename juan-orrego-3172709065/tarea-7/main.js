@@ -46,6 +46,22 @@ separar(3);
 // Punto 3: Cálculo de Estadísticas Básicas:
 // RECORDAR QUE SE REASIGNO LA EDAD DEL PRIMER ESTUDIANTE A 25.
 
+// Con propiedad reduce:
 const sumEdad = estudiantes.reduce((total,estudiantes) => total + estudiantes.edad, 0);
 const promedioEdad = sumEdad / estudiantes.length;
-console.log(`La suma de edades de todos los estudiantes es de: ${sumEdad} contando con un promedio en edad de: ${promedioEdad}`);
+console.log(`Sin map ni forEach, La suma de edades de todos los estudiantes es de: ${sumEdad} contando con un promedio en edad de: ${promedioEdad}`);
+
+// Con map y forEach
+const edades = estudiantes.map(estudiantes => estudiantes.edad);
+
+let sumEdad1 = 0;
+edades.forEach(element => {
+    sumEdad1 += element;
+});
+
+const promEdad = sumEdad / estudiantes.length;
+console.log(`Con map y forEach, la suma de todas las edades es de: ${sumEdad1} y el promedio es de: ${promEdad}`);
+separar(4);
+
+
+// 
