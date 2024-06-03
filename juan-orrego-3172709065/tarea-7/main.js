@@ -18,10 +18,14 @@ const prodName = productos.map(productos => productos.nombre);
 console.log(prodName);
 
 
-let prodTotalCost = 0;
-productos.forEach(element => {
-    prodTotalCost += element.precio;
-});
+// let prodTotalCost = 0;
+// productos.forEach(element => {
+//     prodTotalCost += element.precio;
+// });
+
+// Se cambio la suma con propiedad .reduce
+
+let prodTotalCost = productos.reduce((total,productos) => total + productos.precio, 0);
 
 console.log(`El precio total de todo los articulos es de $${prodTotalCost}`);
 separar(2);
@@ -37,3 +41,11 @@ console.log(estudiantes[1].nombre);
 
 estudiantes[0].edad = 25;
 console.log(estudiantes[0]);
+separar(3);
+
+// Punto 3: Cálculo de Estadísticas Básicas:
+// RECORDAR QUE SE REASIGNO LA EDAD DEL PRIMER ESTUDIANTE A 25.
+
+const sumEdad = estudiantes.reduce((total,estudiantes) => total + estudiantes.edad, 0);
+const promedioEdad = sumEdad / estudiantes.length;
+console.log(`La suma de edades de todos los estudiantes es de: ${sumEdad} contando con un promedio en edad de: ${promedioEdad}`);
