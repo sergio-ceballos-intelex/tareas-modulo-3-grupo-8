@@ -8,36 +8,36 @@ const productos = [
 ];
 
 
-// // filtrar stock mayor de 0
+// filtrar stock mayor de 0
 
-// const upperToCero = productos.filter(number => number.stock > 0);
+const upperToCero = productos.filter(number => number.stock > 0);
 
-// console.log(upperToCero);
+console.log(upperToCero);
 
-// // map = generar solo nombres de productos
+// map = generar solo nombres de productos
 
-// let onlyProducts = productos.map(function(product){
-//     return product.nombre
-// })
+let onlyProducts = productos.map(function(product){
+    return product.nombre
+})
 
-// console.log(onlyProducts);
+console.log(onlyProducts);
 
-// // (opcional) calcular precio total de productos disponibles y suma total de todos ellos
+// (opcional) calcular precio total de productos disponibles y suma total de todos ellos
 
-// let tt = productos.map(function(product){
-//     product = product.precio * product.stock;
-//     return product;
-// })
-// console.log(tt);
+let tt = productos.map(function(product){
+    product = product.precio * product.stock;
+    return product;
+})
+console.log(tt);
 
-// // uso de .reduce = .reduce(acc: acumulador, el: elemeto que se esta iterando) => acc + el, 0(valor inicial del acumulador))
+// uso de .reduce = .reduce(acc: acumulador, el: elemeto que se esta iterando) => acc + el, 0(valor inicial del acumulador))
 
-// let total = tt.reduce((acumulador, elemento) =>
-//     acumulador + elemento ,0)
+let total = tt.reduce((acumulador, elemento) =>
+    acumulador + elemento ,0)
 
-// console.log(total);
+console.log(total);
 
-// // TASK 2 
+// TASK 2 
 
 const estudiantes = [
     { nombre: "Camilo", edad: 33, promedio: 10 },
@@ -45,16 +45,16 @@ const estudiantes = [
     { nombre: "Andres", edad: 29, promedio: 8.7 },
 ];
 
-// // Imprime en la consola el nombre del segundo estudiante.
+// Imprime en la consola el nombre del segundo estudiante.
 
-// let segundoNombre = estudiantes[1].nombre;
-// console.log(segundoNombre);
+let segundoNombre = estudiantes[1].nombre;
+console.log(segundoNombre);
 
-// //Actualiza la edad del primer estudiante a 25 años. Imprime en la consola la información completa del primer estudiante después de la actualización.
+// Actualiza la edad del primer estudiante a 25 años. Imprime en la consola la información completa del primer estudiante después de la actualización.
 
-// let firstStudentAge = estudiantes[0].edad = 25;
-// console.log(firstStudentAge);
-// console.log(estudiantes[0]);
+let firstStudentAge = estudiantes[0].edad = 25;
+console.log(firstStudentAge);
+console.log(estudiantes[0]);
 
 // TASK 3
 
@@ -63,32 +63,32 @@ const estudiantes3 = [
     { nombre: "Juan", edad: 30, promedio: 6 },
     { nombre: "Andres", edad: 29, promedio: 8.7 },
 ];
-// // Calcula el promedio de edad de los estudiantes.
+// Calcula el promedio de edad de los estudiantes.
 
-// let contador = estudiantes3.length
-// console.log(contador);
+let contador = estudiantes3.length
+console.log(contador);
 
-// let inicio = 0
+let inicio = 0
 
-// estudiantes3.forEach(elemento => {
-//     inicio += elemento.edad;
-//     return inicio
-// })
-// console.log(`la suma de las edades de los estudiantes3 es de ${inicio}`);
+estudiantes3.forEach(elemento => {
+    inicio += elemento.edad;
+    return inicio
+})
+console.log(`la suma de las edades de los estudiantes3 es de ${inicio}`);
 
-// let totalPromedio = inicio / contador;
-// console.log(`el promedio de las edades es de ${totalPromedio.toFixed(2)}`);
+let totalPromedio = inicio / contador;
+console.log(`el promedio de las edades es de ${totalPromedio.toFixed(2)}`);
 
-// // forma alterna en la que pude lograrlo a la primera:
+// forma alterna en la que pude lograrlo a la primera:
 
 // let prom = estudiantes3.reduce((acc,el) =>
 //     acc + el.edad,0
 // )
 
-// let total = prom / estudiantes3.length
-// console.log(total);
+// let totalAlterno = prom / estudiantes3.length
+// console.log(totalAlterno);
 
-// // task 4
+// task 4
 
 const estudiantes4 = [
   {
@@ -149,21 +149,21 @@ const estudiantes4 = [
   },
 ];
 
-// // Imprime en la consola el nombre y la edad del estudiante con el promedio más alto.
+// Imprime en la consola el nombre y la edad del estudiante con el promedio más alto.
 
-// let studentList = estudiantes4[0];
+let studentList = estudiantes4[0];
 
-// let highAverage = estudiantes4.filter((student) => {
-//     student.promedio > studentList;
-//     studentList = student;
+let highAverage = estudiantes4.filter((student) => {
+    student.promedio > studentList;
+    studentList = student;
 
-// })
-// console.log(studentList);
-
-
+})
+console.log(studentList);
 
 
-// // Filtra los estudiantes mayores de 20 años en un nuevo array llamado estudiantesMayores.
+
+
+// Filtra los estudiantes mayores de 20 años en un nuevo array llamado estudiantesMayores.
 
 let  olderStudents = [];
 
@@ -177,11 +177,11 @@ console.log(olderStudents);
 
 
 
-// // Imprime en la consola la información completa de los estudiantes mayores de 20 años.
+// Imprime en la consola la información completa de los estudiantes mayores de 20 años.
 
 
-// let upperToTwenty = estudiantes4.filter((student) => {   // utilizando retun y llaves da lo mismo, que quitar los parentesis, llaves y return
-//     return student.edad > 19
-//     });
+let upperToTwenty = estudiantes4.filter((student) => {   // utilizando retun y llaves da lo mismo, que quitar los parentesis, llaves y return
+    return student.edad > 19
+    });
 
-// console.log(upperToTwenty);
+console.log(upperToTwenty);
