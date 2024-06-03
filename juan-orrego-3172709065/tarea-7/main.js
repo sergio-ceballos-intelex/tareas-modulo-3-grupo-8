@@ -17,7 +17,7 @@ console.log(prodOnStock);
 const prodName = productos.map(productos => productos.nombre);
 console.log(prodName);
 
-
+// Recorriendo:
 // let prodTotalCost = 0;
 // productos.forEach(element => {
 //     prodTotalCost += element.precio;
@@ -64,4 +64,87 @@ console.log(`Con map y forEach, la suma de todas las edades es de: ${sumEdad1} y
 separar(4);
 
 
-// 
+// Punto 4: Búsqueda y Filtrado de Datos:
+const estudiantesNuevo = [
+    {
+      nombre: "Ana",
+      edad: 20,
+      promedio: 85,
+      genero: "Femenino",
+      carrera: "Ingeniería Civil",
+      ciudad: "Bogotá",
+    },
+    {
+      nombre: "Juan",
+      edad: 22,
+      promedio: 78,
+      genero: "Masculino",
+      carrera: "Medicina",
+      ciudad: "Medellín",
+    },
+    {
+      nombre: "María",
+      edad: 21,
+      promedio: 90,
+      genero: "Femenino",
+      carrera: "Administración de Empresas",
+      ciudad: "Cali",
+    },
+    {
+      nombre: "Pedro",
+      edad: 23,
+      promedio: 82,
+      genero: "Masculino",
+      carrera: "Derecho",
+      ciudad: "Barranquilla",
+    },
+    {
+      nombre: "Laura",
+      edad: 24,
+      promedio: 88,
+      genero: "Femenino",
+      carrera: "Arquitectura",
+      ciudad: "Cartagena",
+    },
+    {
+      nombre: "Carlos",
+      edad: 20,
+      promedio: 75,
+      genero: "Masculino",
+      carrera: "Ingeniería de Sistemas",
+      ciudad: "Santa Marta",
+    },
+    {
+      nombre: "Sofía",
+      edad: 22,
+      promedio: 95,
+      genero: "Femenino",
+      carrera: "Psicología",
+      ciudad: "Pereira",
+    },
+  ];
+
+  // Imprime en la consola el nombre y la edad del estudiante con el promedio más alto.
+
+let promMayor = estudiantesNuevo[0].promedio;
+let edadPromMayor = estudiantesNuevo[0].edad;
+let nomProMayor = estudiantesNuevo[0].nombre;
+
+estudiantesNuevo.forEach(element => {
+    if(element.promedio > promMayor){
+        promMayor = element.promedio;
+        edadPromMayor = element.edad;
+        nomProMayor = element.nombre;
+    }
+});
+
+console.log(`${nomProMayor} tiene ${edadPromMayor} y es estudiante con un promedio de ${promMayor} el mayor de todos!.`);
+
+  // Filtra los estudiantes mayores de 20 años en un nuevo array llamado estudiantesMayores.
+
+  // Imprime en la consola la información completa de los estudiantes mayores de 20 años.
+
+const estudiantesMayores = estudiantesNuevo.filter(estudiantes => estudiantes.edad > 20);
+console.log(`Los estudiantes mayores a 20 y su información completa a continuación:`);
+console.log(estudiantesMayores);
+separar("---");
