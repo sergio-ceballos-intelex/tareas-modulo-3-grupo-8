@@ -26,3 +26,14 @@ productos.forEach(element => {
 console.log(`El precio total de todo los articulos es de $${prodTotalCost}`);
 separar(2);
 
+// Punto 2: Acceso y Modificación Básica de Datos:
+const estudiantes = [
+    { nombre: "Camilo", edad: 33, promedio: 10 },
+    { nombre: "Juan", edad: 30, promedio: 6 },
+    { nombre: "Andres", edad: 29, promedio: 8.7 },
+];
+
+console.log(estudiantes[1].nombre);
+
+estudiantes[0].edad = 25;
+console.log(estudiantes[0]);
