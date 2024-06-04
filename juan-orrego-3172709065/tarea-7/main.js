@@ -1,86 +1,150 @@
-function separar (numero) {
-    console.log("")
-    console.log(`---Punto ${numero}---`)
+function separar(num){
+    console.log("");
+    console.log(`---Punto ${num}---`);
 }
-
-// Manipulación de objetos y arrays
-
-// 1. Ejercicio de Bucle For con Arrays:
 separar(1);
-let numeros = [1, 2, 3, 4, 5];
-let numMul = [];
+// Punto 1: Obteniendo estadisticas de productos: 
+const productos = [
+    { nombre: "Camiseta", precio: 20, stock: 10 },
+    { nombre: "Pantalón", precio: 30, stock: 5 },
+    { nombre: "Zapatos", precio: 50, stock: 0 },
+    { nombre: "Bufanda", precio: 15, stock: 8 },
+];
 
-for(i = 0; i < numeros.length; i++) {
-    numMul.push(numeros[i]*2);
-}
+const prodOnStock = productos.filter(productos => productos.stock > 0);
+console.log(prodOnStock);
 
-console.log(`El array original es ${numeros} el array con los números *2 es ${numMul}`);
+const prodName = productos.map(productos => productos.nombre);
+console.log(prodName);
+
+// Recorriendo:
+// let prodTotalCost = 0;
+// productos.forEach(element => {
+//     prodTotalCost += element.precio;
+// });
+
+// Se cambio la suma con propiedad .reduce
+
+let prodTotalCost = productos.reduce((total,productos) => total + productos.precio, 0);
+
+console.log(`El precio total de todo los articulos es de $${prodTotalCost}`);
 separar(2);
 
-// 2. Ejercicio de Búsqueda en Arrays de Objetos:
-let productos = [
-    { nombre: "Camisa", precio: 20 },
-    { nombre: "Pantalón", precio: 30 },
-    { nombre: "Zapatos", precio: 50 },
-  ];
+// Punto 2: Acceso y Modificación Básica de Datos:
+const estudiantes = [
+    { nombre: "Camilo", edad: 33, promedio: 10 },
+    { nombre: "Juan", edad: 30, promedio: 6 },
+    { nombre: "Andres", edad: 29, promedio: 8.7 },
+];
 
-let precioM = productos[0].precio;
-let nombreM = productos[0].nombre;
+console.log(estudiantes[1].nombre);
 
-// Con ciclo for
-for(i = 0; i < productos.length; i++) {
-    element = productos[i];
-    if (element.precio < precioM) {
-        precioM = element.precio;
-        nombreM = element.nombre;
-    }
-}
-console.log(`Con ciclo for, El producto con el menor valor es ${nombreM} con un precio de ${precioM}`)
-
-// Con ForEach
-productos.forEach(element => {
-    if (element.precio < precioM) {
-        precioM = element.precio;
-        nombreM = element.nombre;
-    }
-});
-console.log(`El producto con el menor valor es ${nombreM} con un precio de ${precioM}`);
+estudiantes[0].edad = 25;
+console.log(estudiantes[0]);
 separar(3);
 
-// como ya comprobe el entendimiento del ForEach ahora usare este para ciclos en array en toda esta tarea.
+// Punto 3: Cálculo de Estadísticas Básicas:
+// RECORDAR QUE SE REASIGNO LA EDAD DEL PRIMER ESTUDIANTE A 25.
 
-// 3. Ejercicio de Modificación de Propiedades de Objetos en un Array:
-let estudiantes = [
-    { nombre: "Juan", edad: 20 },
-    { nombre: "María", edad: 22 },
-    { nombre: "Pedro", edad: 19 },
-  ];
+// Con propiedad reduce:
+const sumEdad = estudiantes.reduce((total,estudiantes) => total + estudiantes.edad, 0);
+const promedioEdad = sumEdad / estudiantes.length;
+console.log(`Sin map ni forEach, La suma de edades de todos los estudiantes es de: ${sumEdad} contando con un promedio en edad de: ${promedioEdad}`);
 
-  estudiantes.forEach(element => {
-    element.edad++
-    console.log(element)
-  });
+// Con map y forEach
+const edades = estudiantes.map(estudiantes => estudiantes.edad);
+
+let sumEdad1 = 0;
+edades.forEach(element => {
+    sumEdad1 += element;
+});
+
+const promEdad = sumEdad / estudiantes.length;
+console.log(`Con map y forEach, la suma de todas las edades es de: ${sumEdad1} y el promedio es de: ${promEdad}`);
 separar(4);
 
-// 4. Ejercicio de Filtrado de Arrays de Objetos:
-let libros = [
-    { titulo: "El principito", autor: "Antoine de Saint-Exupéry" },
-    { titulo: "Don Quijote de la Mancha", autor: "Miguel de Cervantes" },
-    { titulo: "Cien años de soledad", autor: "Gabriel García Márquez" },
+
+// Punto 4: Búsqueda y Filtrado de Datos:
+const estudiantesNuevo = [
+    {
+      nombre: "Ana",
+      edad: 20,
+      promedio: 85,
+      genero: "Femenino",
+      carrera: "Ingeniería Civil",
+      ciudad: "Bogotá",
+    },
+    {
+      nombre: "Juan",
+      edad: 22,
+      promedio: 78,
+      genero: "Masculino",
+      carrera: "Medicina",
+      ciudad: "Medellín",
+    },
+    {
+      nombre: "María",
+      edad: 21,
+      promedio: 90,
+      genero: "Femenino",
+      carrera: "Administración de Empresas",
+      ciudad: "Cali",
+    },
+    {
+      nombre: "Pedro",
+      edad: 23,
+      promedio: 82,
+      genero: "Masculino",
+      carrera: "Derecho",
+      ciudad: "Barranquilla",
+    },
+    {
+      nombre: "Laura",
+      edad: 24,
+      promedio: 88,
+      genero: "Femenino",
+      carrera: "Arquitectura",
+      ciudad: "Cartagena",
+    },
+    {
+      nombre: "Carlos",
+      edad: 20,
+      promedio: 75,
+      genero: "Masculino",
+      carrera: "Ingeniería de Sistemas",
+      ciudad: "Santa Marta",
+    },
+    {
+      nombre: "Sofía",
+      edad: 22,
+      promedio: 95,
+      genero: "Femenino",
+      carrera: "Psicología",
+      ciudad: "Pereira",
+    },
   ];
 
-  libros.forEach(element => {
-    if (element.titulo.includes("El")) {
-        console.log(`El libro que inicia con "El" es "${element.titulo}" de "${element.autor}"`)
+  // Imprime en la consola el nombre y la edad del estudiante con el promedio más alto.
+
+let promMayor = estudiantesNuevo[0].promedio;
+let edadPromMayor = estudiantesNuevo[0].edad;
+let nomProMayor = estudiantesNuevo[0].nombre;
+
+estudiantesNuevo.forEach(element => {
+    if(element.promedio > promMayor){
+        promMayor = element.promedio;
+        edadPromMayor = element.edad;
+        nomProMayor = element.nombre;
     }
-  });
-  separar(5);
-
-  // 5. Ejercicio de Concatenación de Arrays:
-let frutas1 = ["Manzana", "Plátano", "Naranja"];
-let frutas2 = ["Fresa", "Uva", "Piña"];
-
-frutas2.forEach(element => {
-    frutas1.push(element);
 });
-console.log(frutas1);
+
+console.log(`${nomProMayor} tiene ${edadPromMayor} y es estudiante con un promedio de ${promMayor} el mayor de todos!.`);
+
+  // Filtra los estudiantes mayores de 20 años en un nuevo array llamado estudiantesMayores.
+
+  // Imprime en la consola la información completa de los estudiantes mayores de 20 años.
+
+const estudiantesMayores = estudiantesNuevo.filter(estudiantes => estudiantes.edad > 20);
+console.log(`Los estudiantes mayores a 20 y su información completa a continuación:`);
+console.log(estudiantesMayores);
+separar("---");
