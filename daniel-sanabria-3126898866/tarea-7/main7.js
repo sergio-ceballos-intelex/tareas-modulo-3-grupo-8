@@ -171,7 +171,9 @@ const studentsTwenty = estudiantes4
 .filter(student => student.edad > 20)
 .map(student => student.nombre)
 
-olderStudents = olderStudents.concat(studentsTwenty) //.concat para concatenar
+// olderStudents = olderStudents.concat(studentsTwenty) //.concat para concatenar
+
+let pushArray = olderStudents.push(studentsTwenty) 
 
 console.log(olderStudents);
 
