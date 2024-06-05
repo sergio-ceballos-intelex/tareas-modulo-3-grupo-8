@@ -106,13 +106,8 @@ const estudiantes4 = [
   ];
 
 // item 1
-let promedioMasAlto = 0;
-estudiantes4.filter(function(estudiante){
-  if(estudiante.promedio > promedioMasAlto){
-    promedioMasAlto = estudiante.promedio;
-  }
-});
-console.log("Este ees el promedio mas alto: ",promedioMasAlto,estudiantes4[6].nombre, estudiantes4[6].edad)
+const promedioMasAlto = estudiantes4.find(estudiante => estudiante.promedio === Math.max(...estudiantes4.map(est => est.promedio)));
+console.log(`El estudiante con el promedio más alto es: ${promedioMasAlto.nombre}, de ${promedioMasAlto.edad} años.`)
 
 // item 2
 let estudiantesMayores = estudiantes4.filter((estudiante) => estudiante.edad > 20);
