@@ -17,6 +17,8 @@ console.log('NO CUMPLE CON EL PROMEDIO NECESARIO');
         console.log('CUMLE CON LOS REQUISITOS');
     };
 
+   
+
 
 // // tercer punto
 
