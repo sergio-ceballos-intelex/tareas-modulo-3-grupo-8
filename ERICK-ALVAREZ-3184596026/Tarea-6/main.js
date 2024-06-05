@@ -55,10 +55,8 @@ let estudiantes = [
 
   console.log("Los libros que contienen El son: ")
   for (let h = 0; h < libros.length; h++){
-    let title = libros[h].titulo.includes("El")
-    
-    if(title == true){
-        
+
+    if(libros[h].titulo.includes("El")){
         console.log(libros[h].titulo)
     }
     
