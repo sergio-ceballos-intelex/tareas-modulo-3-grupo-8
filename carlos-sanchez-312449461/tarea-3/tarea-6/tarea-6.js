@@ -60,10 +60,10 @@ for(let uno = 0; uno <= libros.length -1; uno++){
   let frutas1 = ["Manzana", "Plátano", "Naranja"];
 let frutas2 = ["Fresa", "Uva", "Piña"];
 
-let conquetanar = frutas2.length
+let concatenar = frutas2.length
 
 
-for(let fruit = 0; fruit <= conquetanar -1; fruit++){
+for(let fruit = 0; fruit <= concatenar -1; fruit++){
   frutas1.push(frutas2[fruit])
 }
 console.log(frutas1);
