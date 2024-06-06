@@ -27,3 +27,54 @@ const numerosPares = filtrarArreglo(numeros2, function (numero) {
 });
 console.log(numerosPares);
 // Debería imprimir [2, 4]
+
+// task 3
+// Función para filtrar números pares y llamar a un callback con el resultado
+
+const numeros3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function filtrarPares(numeros, callback) {
+  let pares = numeros.filter(numero => numero % 2 === 0);
+  callback(pares);
+}
+
+// Callback para mostrar los números pares en la consola
+
+function mostrarPares(numerosPares) {
+  console.log(numerosPares);
+} 
+
+// Llamar a la función filtrarPares y pasar el callback mostrarPares
+
+filtrarPares(numeros3, mostrarPares);
+
+// task 4
+
+console.log("estoy en Bogota");
+
+const bogotaMadrid = (callback) => {
+  setTimeout(() => {
+    console.log("llegue a Madrid");
+    callback();
+  }, 7000);
+}
+
+const madridFrankfurt = (callback) => {
+  setTimeout(() => {
+    console.log("llegue a Frankfurt");
+    callback()
+  }, 2000);
+};
+
+const frankfurtSeul = () => {
+  setTimeout(() => {
+    console.log("llegue a Seul");
+  }, 10000);
+};
+
+
+bogotaMadrid(() => {
+  madridFrankfurt(() => {
+    frankfurtSeul()
+  })
+});
