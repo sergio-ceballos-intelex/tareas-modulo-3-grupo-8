@@ -32,3 +32,16 @@ const arrFiltred = (arreglo, callback) => {
 
 const numPares = arrFiltred(numeros, (par) => par % 2 === 0);
 console.log(numPares);
+mensaje(3);
+
+// Punto 3 Callbacks: Filtrar Números Pares.
+const filtrarPares = (arreglo, callback) => {
+    newArray = arreglo.filter(num => num % 2 === 0);
+    callback(newArray)
+}
+
+const  mostrarPares = (newArray) => {
+    console.log(newArray);
+}
+
+filtrarPares(numeros, mostrarPares)
