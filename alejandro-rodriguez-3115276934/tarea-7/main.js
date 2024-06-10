@@ -15,6 +15,7 @@ const name=productos.map(e => e.nombre)
 console.log(name);
 
 /* Usando la fn .map retornamos solamente el nombre de cada elemento */
+
 let total= 0;
 for(let i=0;i < productos.length; i++){
   total += productos[i].precio
@@ -102,18 +103,17 @@ const estudiantes = [
 
     console.log("   ");
 
-  console.log(sumatoria);  ///estos son los promedios de cada uno de los estudiantes
-console.log("   ");
-  const promedios= estudiantes.map(e => e.promedio )
+   console.log(sumatoria);  ///estos son los promedios de cada uno de los estudiantes
+    console.log("   ");
+    const promedios= estudiantes.map(e => e.promedio )
   
-  const PromedioMasAlto= Math.max(...promedios)
- const estudiantepromedioMejor= estudiantes.find(estudiante =>  estudiante.promedio === PromedioMasAlto)
-console.log( estudiantepromedioMejor)
-console.log("   ");
-console.log("Este es el promedio mas alto ", PromedioMasAlto) // este es el promedio mas alto
-console.log("   ");
-// console.log("Este es el estudiante con el promedio mas alto: ", estudiantes[6].nombre, estudiantes[6].edad)  //promedio mas alto
-console.log("   ");
+    const PromedioMasAlto= Math.max(...promedios)
+    const estudiantepromedioMejor= estudiantes.find(estudiante =>  estudiante.promedio === PromedioMasAlto)
+    console.log( estudiantepromedioMejor)
+    console.log("   ");
+    console.log("Este es el promedio mas alto ", PromedioMasAlto) // este es el promedio mas alto
+    console.log("   ");
+    console.log("   ");
 const estudiantesMayores= estudiantes.filter(e => e.edad > 20)
 console.log("   ");
 console.log("Estos estudiantes son mayoes de 20 años ", estudiantesMayores)
