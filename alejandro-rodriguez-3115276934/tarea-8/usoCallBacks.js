@@ -52,14 +52,14 @@ const vueloMadrid= (callback) => {
     setTimeout(()=> {
     console.log("llegamos a Madrid")
     console.log("saldremos para Franckfurt seran 2 horas")
-    callback();
+    callback(vueloSeul);
 },7000)
 };
-const vueloFranckfurt= () => {
+const vueloFranckfurt= (callback) => {
         setTimeout(()=> {
         console.log("llegamos a franckfurt")
         console.log("Vuelo Frankfurt - Seul, me demoré 10 horas")
-        vueloSeul();
+        callback();
     },2000)
 };
 const vueloSeul= () => {
