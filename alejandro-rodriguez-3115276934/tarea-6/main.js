@@ -76,5 +76,5 @@ let sumarArray= frutas1.concat(frutas2);
 
 console.log(sumarArray)
 
-/* No vi necesario el for, concatene directamente los dos arrays con .concat
+/* No vi necesario el for, concatene directamente los dos arrays con .concat */
 
