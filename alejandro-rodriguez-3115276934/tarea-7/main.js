@@ -104,12 +104,15 @@ const estudiantes = [
 
   console.log(sumatoria);  ///estos son los promedios de cada uno de los estudiantes
 console.log("   ");
-  const promediox= estudiantes.map(e => e.promedio)
-const PromedioMasAlto= Math.max(...promediox)
+  const promedios= estudiantes.map(e => e.promedio )
+  
+  const PromedioMasAlto= Math.max(...promedios)
+ const estudiantepromedioMejor= estudiantes.find(estudiante =>  estudiante.promedio === PromedioMasAlto)
+console.log( estudiantepromedioMejor)
 console.log("   ");
 console.log("Este es el promedio mas alto ", PromedioMasAlto) // este es el promedio mas alto
 console.log("   ");
-console.log("Este es el estudiante con el promedio mas alto: ", estudiantes[6].nombre, estudiantes[6].edad)  //promedio mas alto
+// console.log("Este es el estudiante con el promedio mas alto: ", estudiantes[6].nombre, estudiantes[6].edad)  //promedio mas alto
 console.log("   ");
 const estudiantesMayores= estudiantes.filter(e => e.edad > 20)
 console.log("   ");
