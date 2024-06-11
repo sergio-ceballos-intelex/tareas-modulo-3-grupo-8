@@ -21,28 +21,74 @@ El programa debe imprimir lo siguiente:
   / Llegué a Seul
 */
 
-function simularVuelo(array) {
-  console.log(`Estoy en ${array[0]}`)
+// function simularVuelo(array) {
+//   console.log(`Estoy en ${array[0]}`)
+//   setTimeout(() => {
+//     console.log(`Viajando de ${array[0]} a ${array[1]}...`)
+//   }, 1000);
+//   setTimeout(()=>{
+//     console.log(`Llegué a ${array[1]}`)
+//   },7000)
+//   setTimeout(() => {
+//     console.log(`Viajando de ${array[1]} a ${array[2]}...`)
+//   }, 7200);
+//   setTimeout(()=>{
+//     console.log(`Llegué a ${array[2]}`)
+//   },9200)
+//   setTimeout(() => {
+//     console.log(`Viajando de ${array[2]} a ${array[3]}...`)
+//   }, 9400);
+//   setTimeout(()=>{
+//     console.log(`Llegué a ${array[3]}`)
+//   },12000)
+// }
+
+// const destinos = ["Bogotá","Madrid", "Franfurkt","Seul"]
+
+// simularVuelo(destinos)
+console.log("-----Tarea 8, punto cuatro corregido-----")
+function simularVuelo(callbackTravel) {
   setTimeout(() => {
-    console.log(`Viajando de ${array[0]} a ${array[1]}...`)
-  }, 1000);
-  setTimeout(()=>{
-    console.log(`Llegué a ${array[1]}`)
-  },7000)
-  setTimeout(() => {
-    console.log(`Viajando de ${array[1]} a ${array[2]}...`)
-  }, 7200);
-  setTimeout(()=>{
-    console.log(`Llegué a ${array[2]}`)
-  },9200)
-  setTimeout(() => {
-    console.log(`Viajando de ${array[2]} a ${array[3]}...`)
-  }, 9400);
-  setTimeout(()=>{
-    console.log(`Llegué a ${array[3]}`)
-  },12000)
+      console.log(`Estoy en Bogotá`)
+      console.log(`Viajando de Bogotá a Madrid...`)
+      callbackTravel()  
+  }, 600);
+  
 }
 
-const destinos = ["Bogotá","Madrid", "Franfurkt","Seul"]
+const vueloMadrid = (callbackTravel)=>{
+  setTimeout(() => {
+      console.log("Llegué a Madrid!!")
+      console.log(`Viajando de Madrid a Frankfurt... `)
+  callbackTravel()
 
-simularVuelo(destinos)
+}, 7000);
+
+}
+
+const vueloFrankfurt = (callbackTravel)=> {setTimeout(() => {
+  console.log("Llegué a Frankfurt!!")
+  console.log(`Viajando de Frankfurt a Seul `)
+  
+  callbackTravel()
+}, 2000)
+
+}
+const vueloSeul = (callbackTravel)=>{setTimeout(() => {
+  
+  console.log("Llegué a Seul!!")
+  callbackTravel()
+}, 10000)
+
+}
+
+simularVuelo(()=>{
+  vueloMadrid(() =>{
+      vueloFrankfurt(()=>{
+          vueloSeul(()=>{console.log("Viaje finalizado!!!")})
+      }
+      )
+  }
+  )
+}
+)
