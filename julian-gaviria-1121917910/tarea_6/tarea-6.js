@@ -28,24 +28,39 @@ let productos = [
 ];
 Utiliza un bucle for para encontrar el producto con el precio más bajo. Luego, imprime el nombre y el precio de ese producto.
 */
+// let productos = [
+//     { nombre: "Camisa", precio: 20 },
+//     { nombre: "Pantalón", precio: 30 },
+//     { nombre: "Zapatos", precio: 50 },
+//   ];
+// console.log("6.2 Ejercicio de Búsqueda en Arrays de Objetos")
+//  let productPrice = []
+//  let lowest
+//   for (let i = 0; i < productos.length; i++) {
+//     productPrice.push(productos[i].precio)
+//     lowest = Number(Math.min(...productPrice))
+//     if (productos[i].precio === lowest) {
+//         console.log(`el producto mas barato es ${productos[i].nombre} con un precio de $${productos[i].precio} pesos`)
+//     }
+//   }
+//   console.log(productPrice)//imprime el array de los precios
+//   console.log(lowest)//imprime el precio mas barato
 let productos = [
-    { nombre: "Camisa", precio: 20 },
-    { nombre: "Pantalón", precio: 30 },
-    { nombre: "Zapatos", precio: 50 },
-  ];
+  { nombre: "Camisa", precio: 20 },
+  { nombre: "Pantalón", precio: 30 },
+  { nombre: "Zapatos", precio: 50 },
+];
 console.log("6.2 Ejercicio de Búsqueda en Arrays de Objetos")
- let productPrice = []
- let lowest
-  for (let i = 0; i < productos.length; i++) {
-    productPrice.push(productos[i].precio)
-    lowest = Number(Math.min(...productPrice))
-    if (productos[i].precio === lowest) {
-        console.log(`el producto mas barato es ${productos[i].nombre} con un precio de $${productos[i].precio} pesos`)
-    }
-  }
-  console.log(productPrice)//imprime el array de los precios
-  console.log(lowest)//imprime el precio mas barato
 
+let lowest = 20
+for (let i = 0; i < productos.length; i++) {
+  
+  if (productos[i].precio === lowest) {
+      console.log(`el producto mas barato es ${productos[i].nombre} con un precio de $${productos[i].precio} pesos`)
+  }
+}
+console.log(productos)//imprime el array de los precios
+console.log(lowest)//imprime el precio mas barato
 /* 
 6.3 Ejercicio de Modificación de Propiedades de Objetos en un Array:
 Dado el siguiente array de objetos que representan estudiantes:
