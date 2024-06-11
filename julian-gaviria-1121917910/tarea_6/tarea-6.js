@@ -52,15 +52,17 @@ let productos = [
 ];
 console.log("6.2 Ejercicio de Búsqueda en Arrays de Objetos")
 
-let lowest = 20
-for (let i = 0; i < productos.length; i++) {
-  
-  if (productos[i].precio === lowest) {
-      console.log(`el producto mas barato es ${productos[i].nombre} con un precio de $${productos[i].precio} pesos`)
+let lowest = productos[0]
+  for (let i = 0; i < productos.length; i++) {
+
+    if (productos[i].precio < lowest.precio) {
+      lowest = productos[i] 
+    }
+    
   }
-}
-console.log(productos)//imprime el array de los precios
-console.log(lowest)//imprime el precio mas barato
+  console.log(productos)//imprime el array de los precios
+  console.log(lowest)//imprime el precio mas barato
+  console.log(`el producto mas barato es ${lowest.nombre} con un precio de $${lowest.precio} pesos`)
 /* 
 6.3 Ejercicio de Modificación de Propiedades de Objetos en un Array:
 Dado el siguiente array de objetos que representan estudiantes:
