@@ -55,14 +55,18 @@ const anyUser = users[1].personId
 
 
 function getPerson(user) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-        const findPerson = persons.find(user => user.personId === anyUser)
+        const findPerson = persons.find(person => person.personId === user)
         if (findPerson) {
             resolve(findPerson)
-        }else{
-            reject("no se encontro el usuario")
         }
     }, 5000);
   });
 }
+
+
+const userInfo = getPerson(anyUser)
+
+Promise.all(userInfo)
+.then(userInfo => {console.log(userInfo)})
