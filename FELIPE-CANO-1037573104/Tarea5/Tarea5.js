@@ -38,8 +38,8 @@ if (edad < 18){
 }
 
 //**Ejercicio 3-Tarea5  ***************************************************************************************************************
-
-1) true || true || false && true || false && true && true || false
+/*
+1.  true || true || false && true || false && true && true || false ;
 
 Solucion:
 
