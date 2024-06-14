@@ -51,26 +51,26 @@ getUsers(isLogged)
 
 // segundo punto
 
-// const anyUser = users.map(user => user.personId);
+const anyUser = users.map(user => user.personId);
 
-// function getPerson(user) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       const findPerson = persons.find(person => person.personId === user.personId);
-//       if (findPerson) {
-//         resolve(findPerson);
-//       } else {
-//         reject("No se encontró la persona");
-//       }
-//     }, 5000);
-//   });
-// }
+function getPerson(user) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const findPerson = persons.find(person => person.personId === user.personId);
+      if (findPerson) {
+        resolve(findPerson);
+      } else {
+        reject("No se encontró la persona");
+      }
+    }, 5000);
+  });
+}
 
-// Promise.all(users.map(user => getPerson(user)))
-//   .then(res => {
-//     console.log(res);
-//   })
-//   .catch(err => {
-//     console.err(err);
-//   });
+Promise.all(users.map(user => getPerson(user)))
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.err(err);
+  });
 
