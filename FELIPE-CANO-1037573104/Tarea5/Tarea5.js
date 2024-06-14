@@ -38,7 +38,9 @@ if (edad < 18){
 }
 
 //**Ejercicio 3-Tarea5  ***************************************************************************************************************
+
 /*
+
 1.  true || true || false && true || false && true && true || false ;
 
 Solucion:
@@ -73,7 +75,7 @@ Solucion:
 
  Respuesta=false
 
- 3) !(!true && (false || false && !!!true || (true && !false))) || false && true
+ 3) !(!true && (false || false && !!!true || (true && !false))) || false && true;
 
  Solucion:
 
@@ -90,3 +92,4 @@ Solucion:
 
 Respuesta=true
 
+*/
